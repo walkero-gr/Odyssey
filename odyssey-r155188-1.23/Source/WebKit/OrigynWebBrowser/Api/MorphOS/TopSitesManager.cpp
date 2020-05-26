@@ -61,6 +61,7 @@ namespace WebCore {
 #define TOPSITESDB "PROGDIR:Conf/TopSites.db"
 #define TOPSITES_TEMPLATE_COVERFLOW_PATH "PROGDIR:Resource/TopSites_CoverFlow.html"
 #define TOPSITES_TEMPLATE_GRID_PATH "PROGDIR:Resource/TopSites_Grid.html"
+#define TOPSITES_TEMPLATE_SMALLGRID_PATH "PROGDIR:Resource/TopSites_SmallGrid.html"
 #define SCREENSHOT_WIDTH 640
 #define MAXENTRIES 9
 #define HOUR 60*60
@@ -599,6 +600,12 @@ void TopSitesManager::generateTemplate(WebView *webView, String originurl)
 			break;
 		}
 
+		case TEMPLATE_SMALLGRID:
+		{
+			templatePath = TOPSITES_TEMPLATE_SMALLGRID_PATH
+			break;
+		}
+
 		case TEMPLATE_GRID:
 		{
 			templatePath = TOPSITES_TEMPLATE_GRID_PATH;
@@ -710,6 +717,7 @@ void TopSitesManager::generateTemplate(WebView *webView, String originurl)
 						break;
 					}
 						
+					case TEMPLATE_SMALLGRID:
 					case TEMPLATE_GRID:
 					{
 						contents.append("<li class=\"clearfix\">");

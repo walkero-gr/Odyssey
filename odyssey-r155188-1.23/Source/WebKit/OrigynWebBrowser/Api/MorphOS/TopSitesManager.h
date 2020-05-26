@@ -40,7 +40,7 @@ class SharedBuffer;
 class TopSitesManager {
 public:
 	typedef enum { SHOW_ALL, SHOW_BOOKMARKS, SHOW_ALL_BUT_BOOKMARKS, SHOW_CUSTOM } filtermode_t;
-	typedef enum { TEMPLATE_GRID, TEMPLATE_3D } displaymode_t;
+	typedef enum { TEMPLATE_GRID, TEMPLATE_3D, TEMPLATE_SMALLGRID } displaymode_t;
 
 	static TopSitesManager& getInstance();
 
